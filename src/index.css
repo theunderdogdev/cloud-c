@@ -1,0 +1,60 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: "Oxygen Mono", monospace;
+}
+:root {
+	--bg: rgb(1, 1, 9);
+	--dropd: rgb(50, 55, 66);
+	--sel: rgb(38, 41, 50);
+	--purp: #4500ff;
+	--gray: #8892b0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ol {
+	list-style-type: lower-roman;
+}
+body {
+	width: 100%;
+	background-color: var(--bg);
+	min-height: 100vh;
+}
+button {
+	cursor: pointer;
+	border: none;
+}
+::selection {
+	background-color: var(--purp);
+}
+
+button {
+	background-color: transparent;
+}
+.btn {
+	position: relative;
+	border: 2px solid #fff;
+	width: fit-content;
+	padding: 7px 20px;
+	font-size: 1rem;
+	border-radius: 25px;
+	color: #fff;
+	transition: all 0.25s ease-in-out;
+	margin: 15px;
+}
+input:not([type="password"]) ~ .bi {
+	opacity: 0;
+}
+input:not([type="password"]):not(:placeholder-shown) ~ .bi {
+	opacity: 1;
+}
+input[type="custom"] ~ .bi {
+	opacity: 1;
+}
+.btn:hover {
+	border-color: var(--purp);
+}
